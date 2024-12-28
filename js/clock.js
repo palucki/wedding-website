@@ -1,5 +1,16 @@
 $(document).ready(function() {
-  let clock;
+
+  FlipClock.Lang.Polish = {
+          'years'   : 'Lat',
+          'months'  : 'Miesięcy',
+          'days'    : 'Dni',
+          'hours'   : 'Godziny',
+          'minutes' : 'Minuty',
+          'seconds' : 'Sekundy'    
+      };
+      FlipClock.Lang['pl']     = FlipClock.Lang.Polish;
+      FlipClock.Lang['pl-pl']  = FlipClock.Lang.Polish;
+      FlipClock.Lang['polish'] = FlipClock.Lang.Polish;
 
   // Grab the current date
   let currentDate = new Date();
@@ -12,7 +23,8 @@ $(document).ready(function() {
 
   if (diff <= 0) {
     // If remaining countdown is 0
-    clock = $(".clock").FlipClock(0, {
+    const el = document.querySelector('.clock');
+    const clock = new FlipClock(el, 0, {
       clockFace: "DailyCounter",
       language:'pl-pl',
       countdown: true,
@@ -21,8 +33,8 @@ $(document).ready(function() {
     console.log("Date has already passed!")
     
   } else {
-    // Run countdown timer
-    clock = $(".clock").FlipClock(diff, {
+    const el = document.querySelector('.clock');
+    const clock = new FlipClock(el, diff, {
       clockFace: "DailyCounter",
       language:'pl-pl',
       countdown: true,
@@ -33,6 +45,7 @@ $(document).ready(function() {
       }
     });
     
+    // Run countdown timer
     // Check when timer reaches 0, then stop at 0
     setTimeout(function() {
       checktime();
