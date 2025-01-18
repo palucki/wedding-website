@@ -194,19 +194,15 @@
 		</div>
 	</div>
 
-
-
 	<div id="fh5co-services" class="fh5co-section-gray">
 		<div class="container">
-			
 			<div class="row animate-box">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
 					<h2>RSVP</h2>
-
 				</div>
 			</div>
 
-			<form id="rsvp-form" class="rsvp-form" action="" method="POST">
+			<!-- <form id="rsvp-form2" class="rsvp-form" action="" method="POST">
 				<div class="row">
 					<div class="col-md-6 col-sm-6">
 						<div class="form-input-group">
@@ -236,12 +232,48 @@
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-md-12" id="alert-wrapper"></div>
+					<div class="col-md-12" id="alert-wrapper2"></div>
 				</div>
 				<button class="btn-fill rsvp-btn">
 					Yes, that's me!
 				</button>
-			</form>
+			</form> -->
+			<div class="event-wrap">
+				<form id="rsvp-form" class="rsvp-form" action="" method="POST">
+					<p>
+						<input type="email" name="email" placeholder="Twój email" required> 
+						<input type="text" name="invite_code" id="invite_code" placeholder="Kod dostępu" required>
+					</p>
+					<p>Wypełnij poniższy formularz uwzględniając wszystkich gości.<br> 
+						Dodaj odpowiedź na zaproszenie, informację o preferowanym menu oraz czy dany gość jest dzieckiem do 6 roku życia.</p>
+					<p class="form_field">
+						<input type="text" placeholder="Imię i nazwisko" name="name" required>
+						<select name="attends" id="attends">
+							<option value="all">uczestniczy w ślubie i weselu</option>
+							<option value="ceremony">uczestniczy w ślubie</option>
+							<option value="none">nie pojawi się</option>
+						  </select>
+						<select name="menu" id="menu">
+							<option value="traditional">menu tradycyjne</option>
+							<option value="vege">menu wegetariańskie</option>
+							<option value="vegan">menu wegańskie</option>
+						  </select>
+						<input type="hidden" id="is_child" name="is_child" value="0"><input type="checkbox" onclick="this.previousSibling.value=1-this.previousSibling.value">poniżej 6 roku życia
+						<span class="remove_form_field btn btn-default btn-sm">Usuń gościa</span>
+					</p>
+					<p>
+						<span class="add_form_field btn btn-default btn-sm">Dodaj kolejnego gościa</span>
+						<button class="btn btn-primary btn-sm btn-fill rsvp-btn">
+							Zakończ i wyślij!
+						</button>
+					</p>
+				</form>
+	
+				<div class="row">
+					<div class="col-md-12" id="alert-wrapper"></div>
+				</div>
+
+			</div>
 
 				<!-- <div class="container animate-box">
 					<div class="fh5co-video fh5co-bg" style="background-image: url(images/img_bg_3.jpg); ">
