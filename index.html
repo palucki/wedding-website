@@ -253,12 +253,13 @@
 							<option value="ceremony">uczestniczy w ślubie</option>
 							<option value="none">nie pojawi się</option>
 						  </select>
-						<select name="menu" id="menu">
+						<select class="can_be_hidden" name="menu" id="menu">
 							<option value="traditional">menu tradycyjne</option>
 							<option value="vege">menu wegetariańskie</option>
 							<option value="vegan">menu wegańskie</option>
 						  </select>
-						<input type="hidden" id="is_child" name="is_child" value="0"><input type="checkbox" onclick="this.previousSibling.value=1-this.previousSibling.value">poniżej 6 roku życia
+						<input type="hidden" id="is_child" name="is_child" value="0"><input class="can_be_hidden" type="checkbox" onclick="this.previousSibling.value=1-this.previousSibling.value">
+						<label class="can_be_hidden" for="is_child">poniżej 6 roku życia</label>
 						<span class="remove_form_field btn btn-default btn-sm">Usuń gościa</span>
 					</p>
 					<p>

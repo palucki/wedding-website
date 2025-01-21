@@ -264,3 +264,14 @@ $(".remove_form_field").click(function() {
         $(this).parent().remove();
     }
 });
+
+$(document).ready(function() {
+    $('#attends').change(function() {
+        var selectedValue = $(this).val();
+        if (selectedValue === 'all') {
+            $(this).nextAll('.can_be_hidden').slice(0, 3).show();
+        } else {
+            $(this).nextAll('.can_be_hidden').slice(0, 3).hide();
+        }
+    });
+});
