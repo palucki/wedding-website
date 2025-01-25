@@ -236,7 +236,7 @@ $('#rsvp-form').on('submit', function (e) {
         && MD5($('#invite_code').val()) !== '4476b929e30dd0c4e8bdbcc82c6ba23a') {
         $('#alert-wrapper').html(alert_markup('danger', '<strong>Przykro mi!</strong> Nieprawidłowy kod dostępu. Sprawdź zaproszenie.'));
     } else {
-        $.post('https://script.google.com/macros/s/AKfycbzNrQcUo1_SPF9_WR0wm0-GrZFvLH88vce9TrHsqJ1yXkfWPqZBy8l7hlgoylHDA0Rg/exec', data)
+        $.post('https://script.google.com/macros/s/AKfycbxF7-nWA3ZEQNtcRcifeY2X79cHFrtKznNrkHG3zvolqho3OuRYrWZLnYdr6BZ6PUnc/exec', data)
             .done(function (data) {
                 console.log(data);
                 if (data.result === "error") {
