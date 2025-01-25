@@ -255,9 +255,17 @@ $('#rsvp-form').on('submit', function (e) {
 
 // dynamic fields in form
 $(".add_form_field").click(function() {
-    $("form > p:nth-child(3)").clone(true).insertBefore("form > p:last-child");
+    var clonedElement = $("form > p:nth-child(3)").clone(true);
+    clonedElement.insertBefore("form > p:last-child");
+
+    // reset view 
+    clonedElement.find("#name").val('');
+    clonedElement.find("#attends").prop("selectedIndex", 0).trigger('change');
+
     return false;
 });
+
+
 
 $(".remove_form_field").click(function() {
     if ($(".form_field").length > 1) {
@@ -269,9 +277,9 @@ $(document).ready(function() {
     $('#attends').change(function() {
         var selectedValue = $(this).val();
         if (selectedValue === 'all') {
-            $(this).nextAll('.can_be_hidden').slice(0, 3).show();
+            $(this).parent().nextAll('.can_be_hidden').slice(0, 1).show();
         } else {
-            $(this).nextAll('.can_be_hidden').slice(0, 3).hide();
+            $(this).parent().nextAll('.can_be_hidden').slice(0, 1).hide();
         }
     });
 });
