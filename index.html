@@ -208,32 +208,49 @@
 			<div class="event-wrap">
 				<form id="rsvp-form" class="rsvp-form" action="" method="POST">
 					<p>
-						<input type="email" name="email" placeholder="Twój email" required> 
-						<input type="text" name="invite_code" id="invite_code" placeholder="Kod dostępu" required>
-					</p>
-					<p>
-						Wypełnij poniższy formularz uwzględniając wszystkich gości.<br> 
-						Potwierdź obecność oraz&nbsp;dodaj ewentualną informację o&nbsp;preferowanym menu.
+						Wypełnij poniższy formularz uwzględniając wszystkich gości.	Potwierdź obecność oraz&nbsp;dodaj ewentualną informację o&nbsp;preferowanym menu.
+						Kliknij "Dodaj gościa", aby rozpocząć. Gdy uzupełnisz wszystkie dane, kliknij "Zakończ i wyślij!".
 					</p>
 					<p class="form_field form-row-wrap">
-						<input type="text" placeholder="Imię i nazwisko" id="name" name="name" required >
-						<label>obecność: 
+						<label for="name">Imię i nazwisko:</label>
+						<input type="text" placeholder="imię i nazwisko" id="name" name="name" required >
+						
+						<!-- <label>Czy będziesz na naszym weselu?</label>
+						<span class="checkboxgroup">
+							<input type="radio" name="radio" id="will_attend"/>
+							<label for="will_attend">Tak</label>
+						</span>
+						<span class="checkboxgroup">
+							<input type="radio" name="radio" id="will_not_attend"/>
+							<label for="will_not_attend">Nie</label>
+						</span> -->
+						<label class="dropdown_menu" for="attends">Czy pojawisz się na naszym weselu? <br> 
 							<select name="attends" id="attends">
 								<option value="all">tak</option>
 								<option value="none">nie</option>
 							</select>
 						</label>
-						<label class="can_be_hidden">menu: 
+						<label class="can_be_hidden dropdown_menu">Menu: <br>
 							<select name="menu" id="menu">
 								<option value="traditional">tradycyjne</option>
 								<option value="vege">wegetariańskie</option>
 								<option value="vegan">wegańskie</option>
 						  	</select>
 						</label>
-						<span class="remove_form_field btn btn-default btn-sm button_right_align">Usuń gościa</span>
+						<br>
+						<span class="remove_form_field btn btn-default btn-sm">Usuń gościa</span>
+						<!-- <span class="save_guest btn btn-default btn-sm">Zapisz</span> -->
 					</p>
 					<p>
-						<span class="add_form_field btn btn-default btn-sm">Dodaj kolejnego gościa</span>
+						<span class="add_form_field btn btn-default btn-sm">Dodaj gościa</span>
+					</p>
+					<p class="form-row-wrap">
+						<label for="email">Twój email:</label>
+						<input type="email" name="email" placeholder="email" required> 
+						<label for="invite_code">Kod dostępu (z zaproszenia):</label>
+						<input type="text" name="invite_code" id="invite_code" placeholder="kod" required>
+					</p>
+					<p>
 						<button class="btn btn-primary btn-sm btn-fill rsvp-btn">
 							Zakończ i wyślij!
 						</button>

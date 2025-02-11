@@ -60,6 +60,7 @@ a:hover, a:active, a:focus {
 }
 
 p {
+  text-align: center;
   margin-bottom: 20px;
 }
 
@@ -1811,12 +1812,43 @@ form label {
 .form-row-wrap {
   border: 1px solid rgba(0, 0, 0, 0.1);
   padding: 15px;
-  width: 100%;
-  float: left;
+  /* width: 100%; */
+  /* margin: 0 auto;  */
+  /* float: left; */
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   -ms-border-radius: 4px;
   border-radius: 4px;
+}
+
+.form-row-wrap input {
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  /* max-width: 300px; */
+}
+
+.form-row-wrap label {
+  display: block;
+  width: 100%;
+  /* max-width: 300px; */
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.form_field {
+  display: none;
+}
+
+.checkboxgroup {
+  display:inline-block;
+  text-align:center;
+  margin: 0 auto;
+}
+.checkboxgroup label {
+  display:block;
+  min-width: 50px;
 }
 
 .button_right_align {
@@ -1824,3 +1856,21 @@ form label {
 }
 /*# sourceMappingURL=style.css.map */
 
+select {
+  /* font-size: 1.3em; */
+  min-width: 200px;
+  border-radius:20px;
+  padding:5px;
+  margin: 5px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  /* background: darkgrey;
+  color: white; */
+  /* outline: none; */
+  text-align: center;
+}
+
+.can_be_hidden {
+  display: none;
+}
