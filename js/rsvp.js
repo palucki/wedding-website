@@ -255,16 +255,21 @@ $('#rsvp-form').on('submit', function (e) {
 
 // dynamic fields in form
 $(".add_form_field").click(function() {
-    if ($(".form_field").css("display") === "none") {
+    if ($(".form_field").css("display") === "none" && $(".guest_label").css("display") === "none") {
         $(".form_field").css("display", "block");
         return;
     }
 
-    // clone the form second paragraph
-    var clonedElement = $("form > p:nth-child(2)").clone(true);
+    // clone the form third and forth paragraph
+    var clonedElement = $("form > p:nth-child(3)").clone(true);
+    var clonedElement2 = $("form > p:nth-child(4)").clone(true);
+
+    clonedElement.show();
+    clonedElement2.hide();
 
     // insert before
     clonedElement.insertBefore("form > p:nth-last-child(3)");
+    clonedElement2.insertBefore("form > p:nth-last-child(3)");
 
     // reset view 
     clonedElement.find("#name").val('');
@@ -274,9 +279,25 @@ $(".add_form_field").click(function() {
 });
 
 $(".save_guest").click(function() {
-    console.log("Clicked on save")
-    $(this).parent().css("display", "none");
-    // $(this).parent().nextAll('.presentation').css("display", "block");
+    var guest_label_text = $(this).parent().find("#name").val() + " - ";
+
+    if ($(this).parent().find("#attends").val() === 'all') {
+        guest_label_text += " będzie na weselu";
+    }
+    else {
+        guest_label_text += " nie będzie na weselu";
+    }
+
+    $(this).parent().hide();
+    $(this).parent().next('.guest_label').children(":first").text(guest_label_text)
+    // $(this).parent().next('.guest_label').next('.raw_text').text("TEST");
+    $(this).parent().next('.guest_label').show();
+    return false;
+});
+
+$(".edit_guest").click(function() {
+    $(this).parent().hide();
+    $(this).parent().prev('.form_field').show();
     return false;
 });
 
@@ -286,34 +307,13 @@ $(".remove_form_field").click(function() {
     }
 });
 
-// $(document).ready(function() {
-//     $('#will_attend').change(function() {
-//         checked = $(this).is(':checked')
-//         if (checked) {
-//             $(this).parent().nextAll('.can_be_hidden').slice(0, 1).show();
-//         }
-//         else {
-//             $(this).parent().nextAll('.can_be_hidden').slice(0, 1).hide(); 
-//         }
-//     });
-// });
-
-// $(document).ready(function() {
-//     $('#will_not_attend').change(function() {
-//         checked = $(this).is(':checked')
-//         if (checked) {
-//             $(this).parent().nextAll('.can_be_hidden').slice(0, 1).hide();
-//         }
-//     });
-// });
-
 $(document).ready(function() {
     $('#attends').change(function() {
         var selectedValue = $(this).val();
         if (selectedValue === 'all') {
-            $(this).parent().nextAll('.can_be_hidden').slice(0, 1).show();
+            $(this).parent().next('.can_be_hidden').slice(0, 1).show();
         } else {
-            $(this).parent().nextAll('.can_be_hidden').slice(0, 1).hide();
+            $(this).parent().next('.can_be_hidden').slice(0, 1).hide();
         }
     });
 });

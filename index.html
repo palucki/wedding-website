@@ -90,7 +90,8 @@
 							<h1>Weronika &amp; Piotr</h1>
 							<br>
 							<!-- <img src="images/fprint.png" alt="Weronika + Piotr" width="150">  -->
-							 <img src="images/obraczki1.png" alt="Weronika + Piotr" width="150"> 
+							<!-- <img src="images/obraczki1.png" alt="Weronika + Piotr" width="150">  -->
+							<img src="images/hearts2.png" alt="Weronika + Piotr" width="150"> 
 							<h2>13.09.2025</h2>
 							<h2>"Wody wielkie nie zdołają ugasić miłości, nie zatopią jej rzeki." <br>Pieśń nad pieśniami, 8:7</h2>
 							<div class="flipTimebox">
@@ -207,23 +208,21 @@
 			
 			<div class="event-wrap">
 				<form id="rsvp-form" class="rsvp-form" action="" method="POST">
+					<p class="headline">Potwierdź swoją obecność</p>
 					<p>
-						Wypełnij poniższy formularz uwzględniając wszystkich gości.	Potwierdź obecność oraz&nbsp;dodaj ewentualną informację o&nbsp;preferowanym menu.
-						Kliknij "Dodaj gościa", aby rozpocząć. Gdy uzupełnisz wszystkie dane, kliknij "Zakończ i wyślij!".
+						Wypełnij poniższy formularz.	
+						<br>
+						Poinformuj nas czy będziesz z nami oraz&nbsp;dodaj informację o&nbsp;preferowanym menu.
+						<br>
+						Gdy uzupełnisz wszystkie dane, kliknij <b>Zakończ i wyślij!</b>.
+						<br>
+						Możesz dodać informację o kilku gościach, wystarczy kliknąć <b>Dodaj gościa</b>.
 					</p>
+					
 					<p class="form_field form-row-wrap">
 						<label for="name">Imię i nazwisko:</label>
 						<input type="text" placeholder="imię i nazwisko" id="name" name="name" required >
 						
-						<!-- <label>Czy będziesz na naszym weselu?</label>
-						<span class="checkboxgroup">
-							<input type="radio" name="radio" id="will_attend"/>
-							<label for="will_attend">Tak</label>
-						</span>
-						<span class="checkboxgroup">
-							<input type="radio" name="radio" id="will_not_attend"/>
-							<label for="will_not_attend">Nie</label>
-						</span> -->
 						<label class="dropdown_menu" for="attends">Czy pojawisz się na naszym weselu? <br> 
 							<select name="attends" id="attends">
 								<option value="all">tak</option>
@@ -238,9 +237,15 @@
 						  	</select>
 						</label>
 						<br>
-						<span class="remove_form_field btn btn-default btn-sm">Usuń gościa</span>
-						<!-- <span class="save_guest btn btn-default btn-sm">Zapisz</span> -->
+						<!-- <span class="remove_form_field btn btn-default btn-sm">Usuń gościa</span> -->
+						<span class="save_guest btn btn-default btn-sm">Zapisz</span>
 					</p>
+
+					<p class="guest_label">
+						<span class="raw_text">PLACEHOLDER</span>
+						<span class="edit_guest btn btn-default btn-sm">Edytuj</span>
+					</p>
+					
 					<p>
 						<span class="add_form_field btn btn-default btn-sm">Dodaj gościa</span>
 					</p>
