@@ -292,6 +292,8 @@ $(".save_guest").click(function() {
     $(this).parent().next('.guest_label').children(":first").text(guest_label_text)
     // $(this).parent().next('.guest_label').next('.raw_text').text("TEST");
     $(this).parent().next('.guest_label').show();
+    // $(this).parent().next('.guest_label').css("display", "inline-block");
+    
     return false;
 });
 
