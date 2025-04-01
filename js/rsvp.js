@@ -232,11 +232,7 @@ $('#rsvp-form').on('submit', function (e) {
 
     console.log("FORM SUBMITTED")
 
-    if (MD5($('#invite_code').val()) !== '9bb6dee73b8b0ca97466ccb24fff3139' // test code with papieska
-        && MD5($('#invite_code').val()) !== '4476b929e30dd0c4e8bdbcc82c6ba23a') {
-        $('#alert-wrapper').html(alert_markup('danger', '<strong>Przykro mi!</strong> Nieprawidłowy kod dostępu. Sprawdź zaproszenie.'));
-    } else {
-        $.post('https://script.google.com/macros/s/AKfycbxF7-nWA3ZEQNtcRcifeY2X79cHFrtKznNrkHG3zvolqho3OuRYrWZLnYdr6BZ6PUnc/exec', data)
+    $.post('https://script.google.com/macros/s/AKfycbwS0aVnsYfxiLN6ueMq3wt1SWwk-MoANarOlZDI1mteE38DTjqQOp9doWr8MyKCmLCo/exec', data)
             .done(function (data) {
                 console.log(data);
                 if (data.result === "error") {
@@ -250,7 +246,6 @@ $('#rsvp-form').on('submit', function (e) {
                 console.log(data);
                 $('#alert-wrapper').html(alert_markup('danger', '<strong>Przykro nam!</strong> Coś nie tak po naszej stronie. '));
             });
-    }
 });
 
 // dynamic fields in form
