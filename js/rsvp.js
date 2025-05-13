@@ -228,8 +228,8 @@ $('#rsvp-form').on('submit', function (e) {
     var data = $(this).serialize();
     console.log(data)
 
+    $('#rsvp-btn').hide();
     $('#alert-wrapper').html(alert_markup('info', '<strong>Sekundkę!</strong> Zapisujemy szczegóły.'));
-
     console.log("FORM SUBMITTED")
 
     $.post('https://script.google.com/macros/s/AKfycbwS0aVnsYfxiLN6ueMq3wt1SWwk-MoANarOlZDI1mteE38DTjqQOp9doWr8MyKCmLCo/exec', data)
