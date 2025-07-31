@@ -232,7 +232,7 @@ $('#rsvp-form').on('submit', function (e) {
     $('#alert-wrapper').html(alert_markup('info', '<strong>Sekundkę!</strong> Zapisujemy szczegóły.'));
     console.log("FORM SUBMITTED")
 
-    $.post('https://script.google.com/macros/s/AKfycbwS0aVnsYfxiLN6ueMq3wt1SWwk-MoANarOlZDI1mteE38DTjqQOp9doWr8MyKCmLCo/exec', data)
+    $.post('https://script.google.com/macros/s/AKfycbzXPA2_-hWUuuESaH0DVjIJl3dqnJz8K7oW1BUkWbd8hiaKEeJ_v9cQytsDEC1Ctkfg/exec', data)
             .done(function (data) {
                 console.log(data);
                 if (data.result === "error") {

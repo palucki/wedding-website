@@ -85,7 +85,8 @@ function record_data(e) {
  * This method is just to prettify the email.
  */
 function formatMailBody(obj) { // function to spit out all the keys/values from the form in HTML
-  var result = "Osoba z adresem email " + obj['email'] + " wysłała informację o: " + obj['name'].join(', ');
+  var result = "Osoba z adresem email " + obj['email'] + 
+               " wysłała informację o: " + obj['name'].join(', ') + ", obecność: " + obj['attends'].join(', ');
   // for (var key in obj) { // loop over the object passed to the function
   //   result += "<h4 style='text-transform: capitalize; margin-bottom: 0'>" + key + "</h4><div>" + obj[key] + "</div>";
   //   // for every key, concatenate an `<h4 />`/`<div />` pairing of the key name and its value, 
