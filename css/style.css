@@ -1150,6 +1150,16 @@ form label {
   color: #646464;
   font-family: "Amsterdam", Arial, serif;
 }
+
+.fh5co-heading h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  line-height: 1.2;
+  /* font-weight: bold; */
+  color: #646464;
+  font-family: "Amsterdam", Arial, serif;
+}
+
 @media screen and (max-width: 768px) {
   .fh5co-heading h2 {
     font-size: 40px;
